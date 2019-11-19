@@ -1,0 +1,44 @@
+// Bootstrap
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+
+@import '../../node_modules/bootstrap/scss/reboot';
+@import '../../node_modules/bootstrap/scss/grid';
+
+// Utility
+@import '../../node_modules/bootstrap/scss/utilities/background';
+@import '../../node_modules/bootstrap/scss/utilities/spacing';
+@import 'utility' ;
+
+//ICON
+@import "vendor/font-awesome.min.css";
+
+//FONT
+@import "typography";
+
+
+$font-heading: 'Circular', sans-serif;
+$font-body: 'Raleway', sans-serif;
+
+
+body {
+    font-family: $font-body;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: $font-heading;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background: white;
+    display: flex;
+    box-shadow: 0px 4px 9px #00000022;
+    @extend %flex-center;
+
+    img {
+        width: 32px;
+    }
+}

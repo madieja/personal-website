@@ -1,0 +1,21 @@
+{
+  "name": "personal",
+  "version": "1.0.0",
+  "description": "Personal web page",
+  "main": "index.js",
+  "repository": "https://madieja.com",
+  "author": "Muhammad Teja Madiantara",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "gatsby": "^2.17.15",
+    "gatsby-plugin-sass": "^2.1.23",
+    "node-sass": "^4.13.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "scripts": {
+    "dev": "gatsby develop"
+  }
+}

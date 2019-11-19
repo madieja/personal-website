@@ -1,0 +1,13 @@
+@font-face {
+    font-family:'Circular';
+    src: url('./fonts/circular/CircularStd-Bold.eot'); // EOT
+    src: url('./fonts/circular/CircularStd-Bold.woff2') format('woff2'),
+         url('./fonts/circular/CircularStd-Bold.woff') format('woff'),
+         url('./fonts/circular/CircularStd-Bold.ttf') format('truetype'),
+         url('./fonts/circular/CircularStd-Bold.svg') format('svg')
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/raleway/Raleway-Regular.ttf');
+}
