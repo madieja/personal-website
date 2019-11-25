@@ -1,13 +1,14 @@
 import React from 'react';
 
-import Header from '../components/part/Header';
+import Layout from '../components/Layout';
 
 const Index = () => {
     return (
-        <>
-            <Header/>
-            <h1>Hello <span style={{color: 'orange'}}><i className="fa fa-bars"></i></span></h1>
-        </>
+        <Layout id="index">
+            <section id="hero" style={{height: '200vh'}}>
+                <h1 id="foo">Hello world</h1>
+            </section>
+        </Layout>
     )
 }
 
