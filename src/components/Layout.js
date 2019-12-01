@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Header from './part/Header';
+import Footer from './part/Footer';
 
 const Layout = props => {
     return(
@@ -9,6 +10,7 @@ const Layout = props => {
             <div className="page-content w-100">
                 {props.children}
             </div>
+            <Footer />
         </main>
     )
 }

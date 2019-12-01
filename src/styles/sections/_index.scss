@@ -1,9 +1,299 @@
 #index {
 
-    section {
+    section#hero {
+        background-color: white;
+        width: 100%;
+        height: 100vh;
         display: flex;
+        position: relative;
         @extend %flex-center;
+
+        .hero-animation {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            .shape {
+                width: 30%;
+                display: block;
+                position: absolute;
+                background-color: transparent;
+                background-image: url('/assets/images/pattern.svg');
+                background-size: calc(100% * 3);
+                background-repeat: no-repeat;
+                transform-origin: 50% 50%;
+                opacity: .7;
+                @keyframes hero-anim-1 {
+                    0%{ transform:rotate(0deg) translate(0,0)}
+                    20%{transform: rotate(36deg) translate(100px,0) }
+                    40%{transform: rotate(72deg) translate(150px,72px) }
+                    60%{transform: rotate(108deg) translate(90px,130px) }
+                    80%{transform: rotate(144deg) translate(-50px,72px) }
+                    100%{transform: rotate(180deg) translate(0,0) }
+                }
+                @keyframes hero-anim-2 {
+                    0%{ transform:rotate(0deg) translate(0,0)}
+                    25%{transform: rotate(36deg) translate(100px,0) }
+                    50%{transform: rotate(72deg) translate(150px,72px) }
+                    75%{transform: rotate(108deg) translate(90px,130px) }
+                    100%{transform: rotate(180deg) translate(0,0) }
+                }
+
+                @keyframes hero-anim-3 {
+                    100%{ transform:rotate(0deg) translate(0,0)}
+                    75%{transform: rotate(36deg) translate(100px,0) }
+                    50%{transform: rotate(72deg) translate(150px,72px) }
+                    25%{transform: rotate(108deg) translate(90px,130px) }
+                    0%{transform: rotate(180deg) translate(0,0) }
+                }
+
+                &::after {
+                    content: "";
+                    display: inherit;
+                    padding-bottom: 100%;
+                }
+
+                &.shape-1 {
+                    top: 50%;
+                    left: 0;
+                    background-position: 100% 0;
+                    animation: hero-anim-1 60s linear 3s infinite alternate;
+                }
+                &.shape-2 {
+                    top: 50%;
+                    right: 0;
+                    background-position: 50% 0;
+                    animation: hero-anim-2 60s linear infinite alternate;
+                }
+                &.shape-3 {
+                    top: -20%;
+                    left: 30%;
+                    background-position: 0 0;
+                    opacity: .4;
+                    animation: hero-anim-3 60s linear infinite alternate;
+                    @include media-breakpoint-down(sm) {
+                        top: 0;
+                    }
+                }
+            }
+        }
+
+        .hero-heading-container {
+            position: relative;
+            z-index: 1;
+
+            h1 {
+                line-height: 1;
+                margin: 0 auto;
+                @include media-breakpoint-up(lg) {
+                    max-width: 500px;
+                }
+            }
+            p {
+                max-width: 450px;
+                margin: 0 auto;
+            }
+        }
     }
 
+    section#about {
+        overflow: hidden;
+        width: 100%;
+        padding-bottom: 50px;
+        background: #267df4;
+        .about-img {
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                object-position: center center;
+            }
+        }
+        .about-heading-container {
+            margin-top: 100px;
+            @include media-breakpoint-down(sm) {
+                margin-top: 0;
+            }
+            .upperline {
+                color: #ffffffaa;
+            }
+            h2 {
+                color: $white;
+                line-height: 1;
+                letter-spacing: 0;
+            }
+            & > p {
+                color: #ffffff;
+                margin-top: 40px;
+            }
+        }
 
+        .about-icon {
+            width: 100%;
+            display: flex;
+            margin-top: 40px;
+            justify-content: flex-start;
+            @include media-breakpoint-down(sm) {
+                justify-content: space-between;
+            }
+            .box {
+                width: 20%;
+                max-width: 60px;
+                margin-right: 40px;
+                flex-shrink: 0;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 25%;
+                    box-shadow: 0 5px 4px rgba(0,0,0,.5);
+                }
+                p {
+                    margin-top: 15px;
+                    font-size: .7rem;
+                    text-align: center;
+                    font-family: $font-heading;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    color: $white;
+                }
+                @include media-breakpoint-down(sm) {
+                    margin-right: 0;
+                    max-width: none;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .btn-wrapper {
+            flex-wrap: nowrap;
+            .text-btn {
+                color: $gray-300;
+                line-height: 1;
+                text-align: center;
+                &:hover, &:focus {
+                    color: $white;
+                }
+            }
+            @include media-breakpoint-down(sm) {
+                justify-content: space-around;
+                
+                button {
+                    flex-shrink: 1;
+                }
+            }
+        }  
+    }
+
+    section#expertise {
+        width: 100%;
+        background: $white;
+        position: relative;
+        padding: 100px 0;
+
+        .expertise-heading-container {
+            h2 {
+                line-height: 1;
+            }
+
+            & > p {
+                max-width: 550px;
+                margin: 0 auto;
+            }
+        }
+
+        .expertise-animation {
+            width: 100%;
+            padding: 20px 0;
+
+            .line {
+                width: 100%;
+                margin: 20px 0;
+                overflow: hidden;
+                background: white;
+                position: relative;
+                &::before, &::after {
+                    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+                    content: "";
+                    height: 100px;
+                    position: absolute;
+                    width: 70px;
+                    z-index: 2;
+                  }
+                &::after {
+                    right: 0;
+                    top: 0;
+                    transform: rotateZ(180deg);
+                  }
+
+                &::before {
+                    left: 0;
+                    top: 0;
+                  }
+
+                &.first > .inner {
+                    @keyframes scroll {
+                        0% {
+                            transform: translateX(0);
+                        }
+                        100% {
+                            transform: translateX(-50%);
+                        }
+                    }
+                    
+                    width: 2600px;
+                    height: 100px;
+                    background-color: white;
+                    background-image: url('/assets/images/expertise-1.png');
+                    background-position: top left;
+                    background-size: contain;
+                    animation: scroll 50s linear infinite;
+                    @include media-breakpoint-down(sm) {
+                        width: 1300px;
+                        height: 50px;
+                    }
+                }
+                &.second > .inner {
+                    @keyframes scroll2 {
+                        0% {
+                            transform: translateX(-50%);
+                        }
+                        100% {
+                            transform: translateX(0);
+                        }
+                    }
+                    
+                    width: 2700px;
+                    height: 100px;
+                    background-color: white;
+                    background-image: url('/assets/images/expertise-2.png');
+                    background-position: top left;
+                    background-size: contain;
+                    animation: scroll2 50s linear infinite;
+                    @include media-breakpoint-down(sm) {
+                        width: 1350px;
+                        height: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    section#contact-cta {
+        width: 100%;
+        background: $black;
+
+        .heading-wrapper {
+            padding: 100px 0;
+
+            h3 {
+                line-height: 1.3;
+            }
+        }
+    }
 }

@@ -12,6 +12,8 @@
 @import '../../node_modules/bootstrap/scss/utilities/display';
 @import '../../node_modules/bootstrap/scss/utilities/flex';
 @import '../../node_modules/bootstrap/scss/utilities/sizing';
+@import '../../node_modules/bootstrap/scss/utilities/text';
+@import "../../node_modules/bootstrap/scss/buttons";
 @import 'utility' ;
 
 //ICON
@@ -22,19 +24,18 @@
 @import "typography";
 
 
-$font-heading: 'Circular', sans-serif;
+$font-heading: 'Hasanamadolobombom', sans-serif;
 $font-body: 'Raleway', sans-serif;
 $black-primary: #222222;
 $black-secondary: #666666;
-// $theme-colors: (
-//   "primary": #cbeafb
-// );
-
+$theme-colors: (
+    "primary": #267df4
+);
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 
 html {
@@ -47,19 +48,27 @@ html {
 
 body {
     font-family: $font-body;
-    font-size: .897rem;
+    font-size: 1rem;
     line-height: 1.8;
     color: $black-secondary;
     -webkit-font-smoothing: antialiased;
     position: relative;
     z-index: -1;
     overflow-x: hidden;
+    @include media-breakpoint-down(sm) {
+        font-size: .8rem;
+    }
 }
 
 ul, li {
     list-style: none;
     margin-bottom: 0;
     padding-bottom: 0;
+}
+
+button, button:hover, button:focus, button:active {
+    outline: none;
+    border: none;
 }
 
 /*===========================
@@ -81,33 +90,109 @@ a {
 	}
 }
 
-h1 {font-size: 3.6rem;}
-h2 {font-size: 2rem;}
-h3 {font-size: 1.6rem;}
+h1 {
+    font-size: 3.6rem;
+    letter-spacing: -2px;
+    @include media-breakpoint-down(sm) {
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+}
+h2 {
+    font-size: 2.5rem;
+    letter-spacing: -2px;
+    @include media-breakpoint-down(sm) {
+        font-size: 2rem;
+    }
+}
+h3 {font-size: 2rem;}
 h4 {font-size: 1.2rem;}
 h5 {font-size: 1rem;}
+
+.upperline {
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $black-secondary;
+}
 
 
 /*========================
  Button
  =========================*/
 
-.main-button-outline {
+.main-btn {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: $font-heading;
+    transition: all .2s ease;
+    color: $white;
+    min-width: 150px;
+    // padding: .5rem 1rem;
+    padding: .5rem 2.1rem;
+    background: $black-primary;
+    outline: none;
+    border: none;
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 7px 9px rgba(theme-color('primary'),.3), 0 3px 6px rgba(0,0,0,.08);
+        background-color: #111;
+        color: $white;
+    }
+}
+
+.main-btn-outline {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: $font-heading;
+    transition: all 0.2s ease;
+    color : $white;
+    border: 2px solid $white;
+    min-width: 150px;
+    padding: .5rem 2.1rem;
+    background: none;
+
+    &:hover {
+        transform: translateY(-5px);
+        // box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+        box-shadow: 0 3px 6px rgba(0,0,0,.6);
+        background-color: theme-color('primary');
+        color: $white;
+        border: 2px solid theme-color('primary');
+    }
+}
+
+.hero-btn {
     font-size: 1rem;
     font-weight: 600;
     font-family: $font-heading;
     transition: all 0.2s ease;
     color : $black-primary;
     border: 2px solid $black-primary;
-    min-width: 180px;
-    padding: .7em 2.1em;
+    min-width: 150px;
+    padding: .5rem 2.1rem;
+    background: none;
 
     &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+        transform: translateY(-5px);
+        // box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+        box-shadow: 0 7px 9px rgba(theme-color('primary'),.3), 0 3px 6px rgba(0,0,0,.08);
         background-color: $black-primary;
         color: $white;
+        border: 2px solid $black-primary;
     }
+}
+
+.text-btn {
+    font-size: .968rem;
+    font-weight: 600;
+    font-family: $font-heading;
+    transition: all .2s ease;
+    color: inherit;
+    text-decoration: underline;
+    outline: none;
+    border: none;
+    background: transparent;
 }
 
 /*========================
@@ -120,7 +205,6 @@ main {
 }
 
 .page-content {
-    padding-top: 70px;
     background-color: $white;
 }
 
@@ -266,6 +350,23 @@ header {
 
 }
 
+footer {
+    width: 100%;
+    background: $black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    p {
+        font-size: 15px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        .right {
+            margin-top: 5px;
+        }
+    }
+}
 
 /* ===============
 Sections
