@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="left d-flex align-items-center">
               <span className="mr-3" style={{width: '20px', display: 'inline-block', lineHeight: 1, transform: 'translateY(-1px)'}}>
                 <svg style={{width: '100%', height: 'auto'}} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  viewBox="0 0 52 52" enable-background="new 0 0 52 52" xmlSpace="preserve">
+                  viewBox="0 0 52 52" enableBackground="new 0 0 52 52" xmlSpace="preserve">
                   <path fill="#ffffff" d="M33.3,7.7C39.4,20,45.6,32.1,51.7,44.3c-17.1,0-34.2,0-51.4,0C6.4,32.1,12.6,20,18.7,7.7c2.4,4.8,4.8,9.6,7.3,14.4
                     C28.4,17.3,30.8,12.5,33.3,7.7z M5,41.4c0.1,0,0.2,0,0.3,0c3.6,0,7.1,0,10.7,0c0.3,0,0.4-0.2,0.6-0.4c2.6-5.1,5.1-10.2,7.7-15.3
                     c0.2-0.4,0.2-0.6,0-1c-1.7-3.4-3.4-6.8-5.2-10.2c-0.1-0.1-0.1-0.2-0.3-0.4C14.1,23.3,9.5,32.3,5,41.4z M33.3,14.1

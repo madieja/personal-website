@@ -5,7 +5,7 @@ import Cs from '../components/part/Comingsoon';
 
 const Contact = () => {
     return <>
-        <Layout>
+        <Layout id="contact" title="Contact me">
             <Cs page="Contact"/>
         </Layout>
     </>

@@ -368,6 +368,42 @@ footer {
     }
 }
 
+.page-transition-in {
+    transition: 0.25s;
+    opacity: 0;
+    animation: slideUp 0.9s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    transform: translate3d(0, 4vh, 0);
+}
+
+.page-transition-out {
+    transition: 0.25s;
+    opacity: 1;
+    animation: slideDown 0.9s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    transform: translate3d(0, 4vh, 0);
+}
+
+@keyframes slideUp {
+    0% {
+      transform: translate3d(0, 4vh, 0);
+      opacity: 0;
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideDown {
+    0% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+    100% {
+      transform: translate3d(0, 4vh, 0);
+      opacity: 0;
+    }
+  }
+
 /* ===============
 Sections
 ================== */

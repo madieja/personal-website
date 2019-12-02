@@ -1,11 +1,13 @@
 import React from "react";
-import {Fade} from 'react-reveal';
+import {Link} from 'gatsby';
+
+import { Fade } from "react-reveal";
 
 import Layout from "../components/Layout";
 
 const Index = () => {
   return (
-    <Layout id="index">
+    <Layout id="index" title="Personal Page">
       <section id="hero">
         <div className="hero-animation">
           {[...Array(3).keys()].map(key => {
@@ -13,8 +15,7 @@ const Index = () => {
             return <span key={id} className={`shape shape-${id}`} />;
           })}
         </div>
-        <Fade bottom>
-          <div className="container hero-heading-container">
+        <div className="container hero-heading-container">
           <h5 className="upperline text-center">Teja Webfolio</h5>
           <h1 className="text-center">
             It's a beautiful day, what shall we do ?
@@ -23,29 +24,31 @@ const Index = () => {
             A man is a Designer, Developer, and Javascript-enthusiast living in
             Bandung.
           </p>
-          <button className="d-block mt-4 mx-auto hero-btn">Let me know</button>
+          <Link to="/contact"><button className="d-block mt-4 mx-auto hero-btn">Let me know</button></Link>
         </div>
-        </Fade>
       </section>
       <section id="about">
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-6 about-img">
-              <img src="assets/images/muhammadteja.png" alt="Muhammad Teja Madiantara" />
+              <img
+                src="assets/images/muhammadteja.png"
+                alt="Muhammad Teja Madiantara"
+              />
             </div>
             <div className="col-12 col-lg-6">
               <div className="about-heading-container">
-              <Fade bottom >
-                <h5 className="upperline mb-3">About Me</h5>
-                <h2>A fast & Agile Approach to project creation.</h2>
-                <p>
-                  Energetic Adobe Certified Expert (ACE) web designer with 6+
-                  years of experience. Seeking to enhance design excellence at
-                  Dujo International. Designed 5 responsive websites per month
-                  for Amphimia Global with 99% client satisfaction. Raised UX
-                  scores by 35% and customer retention by 18%. Received Awwards
-                  prize 2015.
-                </p>
+                <Fade bottom>
+                  <h5 className="upperline mb-3">About Me</h5>
+                  <h2>A fast & Agile Approach to project creation.</h2>
+                  <p>
+                    Energetic Adobe Certified Expert (ACE) web designer with 6+
+                    years of experience. Seeking to enhance design excellence at
+                    Dujo International. Designed 5 responsive websites per month
+                    for Amphimia Global with 99% client satisfaction. Raised UX
+                    scores by 35% and customer retention by 18%. Received
+                    Awwards prize 2015.
+                  </p>
                 </Fade>
                 <div className="about-icon d-flex">
                   <div className="box">
@@ -66,10 +69,11 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="btn-wrapper d-flex my-5 align-items-center">
-                  <button className="main-btn mr-4">Portfolio</button>
+                <Link to="/portfolio"><button className="main-btn mr-4">Portfolio</button></Link>
                   <a
-                    href="https://google.com"
+                    href="/assets/data/Teja_ResumePortfolio.pdf"
                     className="text-btn d-flex align-items-center"
+                    download="Madieja_Resume"
                   >
                     <i className="fa fa-download mr-1" />
                     <span>Download Resume</span>
@@ -82,7 +86,6 @@ const Index = () => {
       </section>
       <section id="expertise">
         <div className="container">
-          <Fade bottom>
           <div className="expertise-heading-container mb-4">
             <h5 className="upperline text-center">Area of Expertise</h5>
             <h2 className="text-center">What i'm good at</h2>
@@ -94,8 +97,6 @@ const Index = () => {
               35% and customer retention by 18%. Received Awwards prize 2015.
             </p>
           </div>
-
-          </Fade>
           <div className="expertise-animation">
             <div className="line first">
               <div className="inner"></div>
@@ -114,12 +115,12 @@ const Index = () => {
                 <h3 className="text-white mb-5">
                   Do you have any interesting idea ? let's make it happen !
                 </h3>
-                <button className="main-btn-outline">Let's Talk</button>
+                <Link to="/contact"><button className="main-btn-outline">Let's Talk</button></Link>
               </div>
             </div>
             <div className="d-none col-lg-6 d-lg-flex align-items-center justify-content-center">
               <svg
-                style={{width: '100%', height: 'auto'}}
+                style={{ width: "100%", height: "auto" }}
                 version="1.1"
                 id="Layer_2"
                 xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +128,7 @@ const Index = () => {
                 x="0px"
                 y="0px"
                 viewBox="0 0 90 30"
-                enable-background="new 0 0 90 30"
+                enableBackground="new 0 0 90 30"
                 xmlSpace="preserve"
               >
                 <g>

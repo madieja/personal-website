@@ -1,0 +1,25 @@
+{
+  "name": "Madieja Webfolio",
+  "title": "Madieja",
+  "shortName": "Madieja",
+  "description": "Muhammad Teja Madiantara",
+  "siteUrl": "https://madieja.com",
+  "prefix": "/",
+  "author": "Muhammad Teja Madiantara",
+  "keywords": [
+    "Muhammad Teja",
+    "Personal Page",
+    "Web Developer",
+    "Web Designer",
+    "Javascript",
+    "React",
+    "Gatsby",
+    "Visual Designer",
+    "Software Developer",
+    "Graphic Designer"
+  ],
+  "background_color": "#222222",
+  "theme_color": "#267df4",
+  "display": "standalone",
+  "icon": "src/styles/icon.png"
+}
