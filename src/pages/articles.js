@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Layout from "../components/Layout";
-import Cs from '../components/part/Comingsoon';
+import Maintenance from '../components/part/503';
 
 const Articles = () => {
     return <>
         <Layout id="articles" title="Articles of Madiantara Teja">
-            <Cs page="Articles" />
+            <Maintenance/>
         </Layout>
     </>
 }

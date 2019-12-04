@@ -15,6 +15,12 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     'gatsby-plugin-robots-txt',
     `gatsby-plugin-polyfill-io`,
+	{
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        //trackingId: `TRACKING ID`,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

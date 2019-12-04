@@ -40,14 +40,11 @@ const Index = () => {
               <div className="about-heading-container">
                 <Fade bottom>
                   <h5 className="upperline mb-3">About Me</h5>
-                  <h2>A fast & Agile Approach to project creation.</h2>
+                  <h2>Creative professional in love with all about tech and art.</h2>
                   <p>
-                    Energetic Adobe Certified Expert (ACE) web designer with 6+
-                    years of experience. Seeking to enhance design excellence at
-                    Dujo International. Designed 5 responsive websites per month
-                    for Amphimia Global with 99% client satisfaction. Raised UX
-                    scores by 35% and customer retention by 18%. Received
-                    Awwards prize 2015.
+                  Hello! I'm Teja, currently living in Indonesia. Lazy person who love to facing problems,  thinking, and get the job done. Currently freelancing as Digital Designer and Software Engineer.
+                  Specializing in Visual Design, UI/UX Design, and Web/App Development.
+                  Would love to take any opportunities to see the world better.
                   </p>
                 </Fade>
                 <div className="about-icon d-flex">
@@ -90,11 +87,9 @@ const Index = () => {
             <h5 className="upperline text-center">Area of Expertise</h5>
             <h2 className="text-center">What i'm good at</h2>
             <p className="text-center mt-4">
-              Energetic Adobe Certified Expert (ACE) web designer with 6+ years
-              of experience. Seeking to enhance design excellence at Dujo
-              International. Designed 5 responsive websites per month for
-              Amphimia Global with 99% client satisfaction. Raised UX scores by
-              35% and customer retention by 18%. Received Awwards prize 2015.
+              I have great experience with Adobe creative tools like Photoshop, Illustrator, XD, and Indesign to create many design solutions.
+              Alongside with extensive knowledge about Web / App programming especially front-end technologies such as HTML, CSS, Javascript with it's frameworks,
+              also familiar with some backend systems like RESTful API, GraphQL, and JSON Web Token.
             </p>
           </div>
           <div className="expertise-animation">

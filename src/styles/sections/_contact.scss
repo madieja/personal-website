@@ -1,0 +1,30 @@
+#contact {
+    #hero {
+        width: 100%;
+        background: white;
+
+        .heading-wrapper {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            h3 {
+                font-size: 1.3rem;
+                line-height: 1;
+                color: $black-secondary;
+                padding-bottom: 3px;
+                border-bottom: 1px solid theme-color('primary');
+            }
+
+            h1 {
+                letter-spacing: 2px;
+                line-height: 1.4;
+                @include media-breakpoint-down(sm) {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}

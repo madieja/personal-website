@@ -1,7 +1,7 @@
 {
   "name": "personal",
   "version": "1.0.0",
-  "description": "Personal web page",
+  "description": "Madieja personal web page",
   "main": "index.js",
   "repository": "https://madieja.com",
   "author": "Muhammad Teja Madiantara",
@@ -27,6 +27,7 @@
   },
   "scripts": {
     "dev": "gatsby develop -H 0.0.0.0",
-    "build": "gatsby build"
+    "build": "gatsby build",
+    "clean": "gatsby clean"
   }
 }

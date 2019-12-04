@@ -40,7 +40,7 @@ const Header = () => {
                     <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/_madieja"><i className="fa fa-twitter"></i></a>
                     <a target="_blank" rel="noopener noreferrer" href="https://instagram.com/madieja"><i className="fa fa-instagram"></i></a>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/madieja"><i className="fa fa-github"></i></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/madieja"><i className="fa fa-linkedin"></i></a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/madieja"><i className="fa fa-linkedin"></i></a>
                 </div>
 
                 <div className="drawer-trigger d-block d-lg-none ml-auto ">
@@ -58,10 +58,10 @@ const Header = () => {
                     <Link to="/articles">Articles</Link>
                     <Link to="/contact">Contact</Link>
                     <div className="social">
-                        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/madieja"><i className="fa fa-twitter"></i></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/_madieja"><i className="fa fa-twitter"></i></a>
                         <a target="_blank" rel="noopener noreferrer" href="https://instagram.com/madieja"><i className="fa fa-instagram"></i></a>
                         <a target="_blank" rel="noopener noreferrer" href="https://github.com/madieja"><i className="fa fa-github"></i></a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/madieja"><i className="fa fa-linkedin"></i></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/madieja"><i className="fa fa-linkedin"></i></a>
                     </div>
                 </nav>
             </div>

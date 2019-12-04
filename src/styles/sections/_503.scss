@@ -1,0 +1,7 @@
+#maintenance-page {
+    h3 {
+        @include media-breakpoint-down(sm) {
+            font-size: 1.5rem;
+        }
+    }
+}
